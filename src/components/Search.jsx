@@ -8,16 +8,16 @@ const Search = () => {
   const dispatch = useDispatch();
 
   const handleInputValueChange = (e) => {
-     console.log("input value changed", e.target.value);
+    console.log("input value changed", e.target.value);
     dispatch(setSearchTerm(e.target.value.toLowerCase()));
   };
 
   return (
-    <section className="flex items-center bg-white w-[30%] text-black py-2 px-2 rounded">
+    <section className="flex items-center bg-white lg:w-[30%] md:w-[40%] w-full text-black py-2 px-2 rounded">
       <input
         type="text"
         placeholder="Search for a country"
-        className="w-full border-none text-black  focus:outline-none"
+        className="w-full border-none text-black md:text-base text-xs  focus:outline-none"
         value={searchTerm}
         autoFocus
         onChange={handleInputValueChange}

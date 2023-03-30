@@ -23,14 +23,14 @@ const Filter = () => {
   }, [dispatch, filter]);
 
   return (
-    <section className="w-1/5 inline-block relative text-black">
-      <div className="bg-[#fff] w-full h-full rounded p-1 flex items-center">
+    <section className="lg:w-1/5 md:w-[30%] w-full inline-block relative text-black md:pt-0 pt-4">
+      <div className="bg-[#fff] w-full  h-full rounded p-1 flex items-center">
         <input
           type="text"
           readOnly
           placeholder="Filter by Region"
           value={filter}
-          className="w-full border-none p-1 text-black focus:outline-none"
+          className="w-full border-none p-1 text-black focus:outline-none md:text-base text-xs"
         />
 
         <BsChevronDoubleDown
@@ -43,7 +43,7 @@ const Filter = () => {
           {regions.map((item, index) => {
             return (
               <div
-                className="cursor-pointer p-2 tetx-black"
+                className="cursor-pointer p-2 text-black md:text-base text-xs"
                 key={index}
                 onClick={() => {
                   setFilter(item);
